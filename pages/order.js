@@ -15,6 +15,8 @@ import { SwalLoading } from '../utils/swal-fire'
 
 const Order = () => {
     const [orders, setOrders] = useState([])
+    const [role, setRole] = useState('user')
+
 
     const getOrders = async () => {
         const Swal = SwalLoading()
@@ -36,6 +38,7 @@ const Order = () => {
 
     useEffect(() => {
         getOrders()
+        setRole(getRole())
     }, [])
 
     return (
@@ -57,7 +60,7 @@ const Order = () => {
                         <TableHead>
                             <TableRow>
                                 <TableCell >Tanggal</TableCell>
-                                {getRole() === 'admin' && (<TableCell >Nama</TableCell>)}
+                                {role === 'admin' && (<TableCell >Nama</TableCell>)}
                                 <TableCell align="right">Total</TableCell>
                                 <TableCell >Status</TableCell>
                                 <TableCell align="center">Action</TableCell>
@@ -69,7 +72,7 @@ const Order = () => {
                                     key={order.id}
                                 >
                                     <TableCell scope="row">{order.date}</TableCell>
-                                    {getRole() === 'admin' && (
+                                    {role === 'admin' && (
                                         <TableCell align='left'>{order?.user.profile.name}</TableCell>
                                     )}
                                     <TableCell align="right">{order.total}</TableCell>
