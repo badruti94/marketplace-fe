@@ -1,0 +1,14 @@
+.link, .name{
+    margin-right: 1rem;
+    text-decoration: none;
+    color: orange;
+    font-size: 1.3rem;
+}
+.link:hover{
+    color: red;
+}
+
+.name{
+    color: #1976d2;
+    margin-left: 2rem;
+}
