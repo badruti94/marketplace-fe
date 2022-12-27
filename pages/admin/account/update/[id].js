@@ -121,23 +121,6 @@ const AddAccount = ({ id }) => {
                 </FormGroup>
                 <FormGroup sx={{ mb: 2 }}>
                     <TextField
-                        id="role"
-                        select
-                        label="Role"
-                        name='role'
-                        variant="standard"
-                        value={dataForm.role}
-                        onClick={handleChange}
-                        SelectProps={{
-                            native: true,
-                        }}
-                    >
-                        <option key='user' value="user">user</option>
-                        <option key='admin' value="admin">admin</option>
-                    </TextField>
-                </FormGroup>
-                <FormGroup sx={{ mb: 2 }}>
-                    <TextField
                         id="address"
                         label="Address"
                         variant="standard"

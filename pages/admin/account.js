@@ -80,7 +80,6 @@ const Account = () => {
                                 <TableCell >Name</TableCell>
                                 <TableCell align="left">Username</TableCell>
                                 <TableCell align="right">Phone Number</TableCell>
-                                <TableCell align="right">Role</TableCell>
                                 <TableCell align="center">Action</TableCell>
                             </TableRow>
                         </TableHead>
@@ -90,7 +89,6 @@ const Account = () => {
                                     <TableCell scope="row">{account.profile.name}</TableCell>
                                     <TableCell align="left">{account.username}</TableCell>
                                     <TableCell align="right">{account.profile.phone_number}</TableCell>
-                                    <TableCell align="right">{account.role}</TableCell>
                                     <TableCell align="right">
                                         <ButtonIcon
                                             onClick={() => { router.push(`/admin/account/update/${account.id}`) }}
